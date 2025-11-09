@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GPSTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/dark_blue</item>
+
+    </style>
+
+    <style name="Theme.GPSTracker" parent="Base.Theme.GPSTracker" />
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#46bdbf</item>
+
+        <item name="colorSwitchThumbNormal">#373737
+        </item>
+
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+</resources>

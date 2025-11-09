@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "210909886953",
+    "project_id": "khinmon-ca-ia",
+    "storage_bucket": "khinmon-ca-ia.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210909886953:android:7b1fcf157c6af3178a3378",
+        "android_client_info": {
+          "package_name": "com.example.gpstracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJbGGWcRW2k_Mrewy5yHIeFl_i9bnSJS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#242632"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Speedometer">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:titleTextAppearance="@style/Title"
+        app:title="Speed Meter"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white"
+        android:layout_marginTop="40sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/localityTV"
+        android:layout_marginTop="10sp"
+        android:text="City"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/toolbar"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="200sp"
+        android:layout_below="@+id/localityTV"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/card"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="50sp"
+        app:cardElevation="100sp"
+        style="@style/Widget.Material3.CardView.Filled"
+        app:cardBackgroundColor="#242632">
+
+        <com.github.anastr.speedviewlib.PointerSpeedometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:id="@+id/speedometer"
+            app:sv_speedTextColor="#ffff00"
+            app:sv_unitTextColor="#ffff00"
+            app:sv_withTremble="false"
+            app:sv_textSize="12sp"
+            app:sv_markWidth="3sp"
+            app:sv_speedTextSize="23sp"
+            app:sv_unitTextSize="18sp"
+            app:sv_backgroundCircleColor="@color/dark_blue"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speedTV"
+        android:textColor="@color/white"
+        android:text="Speed: 0.0 Km/h"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/card"
+        android:layout_marginTop="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speedTV"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.Material3.CardView.Filled"
+            app:cardBackgroundColor="#2D2F3C"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14sp"
+                    android:text="Distance"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="23sp"
+                    android:textColor="#ffff00"
+                    android:id="@+id/distanceTV"
+                    android:gravity="center_horizontal"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="km"
+                    android:textColor="#ffff00"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.Material3.CardView.Filled"
+            app:cardBackgroundColor="#2D2F3C"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14sp"
+                    android:text="Average"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="23sp"
+                    android:textColor="#ffff00"
+                    android:id="@+id/avgSpeedTV"
+                    android:gravity="center_horizontal"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="km/h"
+                    android:textColor="#ffff00"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.Material3.CardView.Filled"
+            app:cardBackgroundColor="#2D2F3C"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="14sp"
+                    android:text="Maximum"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="23sp"
+                    android:textColor="#ffff00"
+                    android:id="@+id/maxSpeedTV"
+                    android:gravity="center_horizontal"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="km/h"
+                    android:textColor="#ffff00"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

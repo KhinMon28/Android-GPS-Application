@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/loginbg">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:background="@drawable/custom_edittext">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:id="@+id/loginText"
+                android:textAlignment="center"
+                android:textColor="@color/dark_blue"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/newusername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_text_border"
+                android:drawableLeft="@drawable/person"
+                android:hint=" new username"
+                android:paddingLeft="15dp"
+                android:textColor="@color/dark_blue"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:textSize="19dp" />
+
+            <EditText
+                android:id="@+id/newpassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_text_border"
+                android:drawableLeft="@drawable/password"
+                android:hint=" new password"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:textColor="@color/dark_blue"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:textSize="19dp" />
+
+            <EditText
+                android:id="@+id/confirmpassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_text_border"
+                android:drawableLeft="@drawable/password"
+                android:hint=" confirm password"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp"
+                android:textColor="@color/dark_blue"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:textSize="19dp" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="15dp"
+                android:text="Sign up"
+                android:textColor="@color/white"
+                android:id="@+id/signupButton"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:id="@+id/loginRedirectText"
+        android:text="Already a user? Login now!"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/grey"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>
+
